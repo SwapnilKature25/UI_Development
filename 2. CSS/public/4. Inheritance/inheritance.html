@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Properties</title>
+    <style>
+        body{
+            color:red;
+            border: 2px solid red;
+            padding: 4px;
+        }
+        li{
+            /* inherit :  indicates whats the parent value it will apply same value
+                by default the body values are inherit. 
+            */
+            /* color: inherit; */
+
+
+            /* initial : before inheriting what is the color */
+            /* color: initial; */
+
+
+            /* unset : it inicates the removing of effects */
+            /* color: unset; */
+
+            /* to access all parent properties use all */
+            /* all:inherit; */
+            /* this reusablility , inheriting, unseting we will Understand it in sass.  
+                because css will not allow reusability and Extensibility
+            */
+
+            color: initial;
+            border: inherit;
+            padding: unset;  
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Inheritance Properties</h2>
+    <ol>
+        <li>Item-1</li>
+    </ol>
+</body>
+</html>

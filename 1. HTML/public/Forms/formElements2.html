@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>form elements</title>
+    <style>
+        meter{
+            width: 500px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+ <div>
+    <!-- 12. dropdown list 
+         13. listbox
+         14. meter
+         15. progressbar 
+    
+    -->
+
+    <!-- 12. dropdown list 
+        value, selected, disabled, text 
+    -->
+    <!-- 
+    <h2>Select a Category</h2>
+    <select id="">
+        <option>All</option>
+        <option>Electronics</option>
+        <option>Footwear</option>
+        <option>Fashion</option>
+    </select> -->
+
+    <h2>dropdown list</h2>
+
+    <form method="get">
+        <h2>Select a Category</h2>
+        <select name="Category">
+            <!-- selected if mention multiple will be aplllied to only one option.
+                but disable can be applied to many options 
+            -->
+            <option>All </option>
+            <option value="elem">Electronics</option>
+            <option >Footwear</option>
+            <option disabled>Materials</option>
+            <option value="elem" selected>Electronics</option>
+            <option >Footwear</option>
+            <option value="fashion" disabled>Fashion</option>
+        </select>
+        <button>Register</button>
+
+        <br><br><br>
+
+
+        <select name="Categories">
+            <option>Select Category</option>
+            <optgroup label="Electronics">
+                <option value="tv">TV</option>
+                <option value="Mpbile">Mobile</option>
+            </optgroup>
+            <optgroup label="Footwear">
+                <option value="casuals">Casuals</option>
+                <option value="sneakers">Sneakers</option>
+            </optgroup>
+        </select>
+        <button>Register</button>
+
+    </form>
+    <br><br><br><br>
+
+
+
+
+
+
+
+    <!-- for sequence selection use shift key.
+        for random selection use ctrl key. 
+    -->
+    <!-- 13. listbox -->
+     <h2>listbox</h2>
+    <form >
+        <select name="Categories" size="6" multiple>
+            <option>Select Category</option>
+            <optgroup label="Electronics">
+                <option value="tv">TV</option>
+                <option value="Mpbile">Mobile</option>
+            </optgroup>
+            <optgroup label="Footwear">
+                <option value="casuals">Casuals</option>
+                <option value="sneakers">Sneakers</option>
+            </optgroup>
+            <optgroup label="Grocerries">
+                <option value="casuals">Casuals</option>
+                <option value="sneakers">Sneakers</option>
+            </optgroup>
+        </select>
+        <button>Register</button>
+    </form>
+
+
+
+
+
+
+
+
+    <!-- 14. meter -->
+     <!-- success color is green
+          warning color is yellow
+          danger color is red
+    -->
+    <h2>meter</h2>
+     <fieldset>
+        <legend>Password Strength</legend>
+        <dl>
+            <dt>Strong Password</dt>
+            <dd>
+                <!-- green -->
+                <!-- meter is readonly it can be change dynamically through logic only. -->
+                <meter min="1" max="100" value="100"></meter>
+            </dd>
+
+            <dt>Week Password</dt>
+            <dd>
+                <!-- yellow -->
+                <meter value="100" min="1" max="100" low="40" high="80"></meter>
+            </dd>
+
+            <dt>Poor Password</dt>
+            <dd>
+                <!-- red -->
+                <meter value="100" min="1" max="100" low="60" high="80"></meter>
+            </dd>
+
+            <!-- if value is not max then it will not show proper contextual colors -->
+            <dt>Poor Password</dt>
+            <dd>
+                <meter value="80" min="1" max="100" low="60" high="80"></meter>
+            </dd>
+        </dl>
+     </fieldset>
+
+
+
+
+
+
+     <h2>Progressbar</h2>
+     <!-- 15. Progressbar -->
+      <fieldset>
+            <legend>Downloading</legend>
+            <dl>
+                <dt>Preparing for Donwloads</dt>
+                <dd>
+                    <progress></progress>
+                </dd>
+                <dt>70% Donwloaded</dt>
+                <dd>
+                    <progress min="1" max="100" value="70"></progress>
+                </dd>
+            </dl>
+      </fieldset>
+
+
+
+
+
+
+      <h2>textarea</h2>
+      <!-- 16. textarea -->
+       <fieldset>
+            <legend>Your Comment</legend>
+            <textarea name="comment" rows="4" cols="20" readonly>
+                Your text...
+            </textarea>
+            <br><br>
+            <button>Post Comment</button>
+       </fieldset>
+
+
+
+
+
+       <h2>button</h2>
+       <!-- 17. Buttons -->
+        <!-- we can give additional functionality to reset and submit buttons like onclick, onreset -->
+       <form  onsubmit="alert('Form Submitted..')"  onreset="alert('Form will reset')">
+        <fieldset>
+            <legend>Register</legend>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" name="UserName"></dd>
+            </dl>
+            <!-- 
+            input type submit or button not allow icons within it whereas button element allows.
+            you can't add any other icons in buttons input element.  
+            -->     
+            <!-- <input type="submit" value=" &gt; Register">
+            <input type="reset" value="Cancel">  -->
+             
+
+            <!-- <label>Generic Buttons</label>
+            <button type="submit">
+                <span class="bi bi-people"></span> Register
+            </button>
+            <button type="reset">
+               <img src="../assets/linkedin.jpeg" width="30"> </span>
+            </button> -->
+
+            
+            <!-- <label for="">Non-Generic button</label> <br>
+            <input type="button" value="Print" name="btn">
+            <button type="button"> Save</button> -->
+
+
+            <button type="submit"> Submit</button>
+            <button type="submit"> Register</button>
+            <button type="submit"> Post</button>
+            <button type="reset"> Reset</button>
+
+        </fieldset>
+       </form>
+
+       <!-- We need multiple submit buttons to handle various functionalities -->
+       <form>
+        <fieldset>
+            <legend>Database Operations</legend>
+            <button type="submit" name="action"  value="insert"> Insert</button>
+            <button type="submit" name="action" value="update"> Update</button>
+            <button type="submit" name="action" value="delete"> Delete</button>
+            
+        </fieldset>
+       </form>
+
+
+
+
+       <fieldset>
+            <legend>Register</legend>
+            <form>
+                Email : <input type="text" name="email">
+                <button type="submit">Register</button>
+            </form>
+       </fieldset>
+       <fieldset>
+            <legend>Login</legend>
+            <form>
+                User Name : <input type="text" name="username">
+                <button type="submit">Login</button>
+            </form>
+       </fieldset>
+
+
+       
+
+ </div>
+</body>
+</html>

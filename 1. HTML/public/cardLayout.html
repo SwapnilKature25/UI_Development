@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Card Layout using Images</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        #card{
+            width: 280px;
+            /* box-shadow: 1px 1px 5px tomato; */
+            border: 1px solid  white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+        }
+        #card:hover{
+            transition: 0.2s;
+            translate: 0 10px;
+            box-shadow: 5px 5px 10px tomato;
+        }
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            justify-content: space-evenly;
+            
+        }
+        button{
+            width: 100%;
+            font-size: 20px;
+            background-color: tomato;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        #card-header{
+            background-color: tomato;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        p span{
+            color: tomato;
+            margin-right: 5px;
+        }
+        p{
+            color: black;
+        }
+
+        #navbar{
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 3%;
+            cursor: pointer;
+            background-color: whitesmoke;
+            color: black;
+            padding: 15px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #navbar h2{
+            text-shadow: 2px 4px 3px grey;
+        }
+        #mainPage{            
+            background-image: url("assets/sid-ramirez--Wh5pJbYZ-0-unsplash.jpg");
+            background-size: cover; /* This ensures the image covers the entire div */
+            background-position: center; /* This centers the image */
+            width: 100%;
+            height: 100vh; /* 100% of the viewport height */
+            /* extra content hides  , scroll => when we adjust width both vertical and horizontal bar will come, auto => get only scroll bar needed for situation  */
+            overflow: hidden;
+        }
+        main{
+            background-image: url("assets/lance-asper--pSOAtdMVlk-unsplash.jpg");
+            background-size: cover; 
+            background-position: center; 
+            width: 100%;
+            height: 100vh; 
+            overflow: auto;
+        }
+        #card-body img,p{
+            margin-bottom: 6px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="navbar">
+                <div>
+                    <img src="assets/logo.svg" width="200px">
+                </div>
+                <div>
+                    <h2>NEW CARS</h2>
+                </div>
+                <div>
+                    <h2>USED CARS</h2>
+                </div>
+                <div>
+                    <h2>REVIEWS & NEWS</h2>
+                </div>
+                <div>
+                    <h2>SERVICE CENTERS</h2>
+                </div>
+            </div>
+        </nav>
+        <div id="mainPage">
+            
+        </div>
+    </header>
+    <main>
+    <div id="container">
+        <div id="card">
+            <div id="card-header">
+                <h3>Bugatti Chiron</h3>
+            </div>
+            <div id="card-body">
+                <img src="assets/RR_Bugatti_Chiron_Super_Sport.webp" alt="" width="100%" height="200">
+                <p>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-half"></span>
+                </p>
+                <p class="bi bi-currency-rupee">9000000.44</p>
+            </div>
+            <div id="card-footer">
+                <button><span class="bi bi-cart4"></span>Add to Cart</button>
+            </div>    
+
+        </div>
+        <div id="card">
+            <div id="card-header">
+                <h3>Lambhorghini Car</h3>
+            </div>
+            <div id="card-body">
+                <img src="assets/Lamborghini.jpg" alt="" width="100%" height="200">
+                <p>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-half"></span>
+                </p>
+                <p class="bi bi-currency-rupee">6000000.44</p>
+            </div>
+            <div id="card-footer">
+                <button><span class="bi bi-cart4"></span>Add to Cart</button>
+            </div>    
+        </div>
+
+        <div id="card">
+            <div id="card-header">
+                <h3>MC20 BluInfinito</h3>
+            </div>
+            <div id="card-body">
+                <img src="assets/MC20BluInfinito.jpg" alt="" width="100%" height="200">
+                <p>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-half"></span>
+                </p>
+                <p class="bi bi-currency-rupee">5000000.44</p>
+            </div>
+            <div id="card-footer">
+                <button><span class="bi bi-cart4"></span>Add to Cart</button>
+            </div>    
+        </div>
+
+        <div id="card">
+            <div id="card-header">
+                <h3>Future Car</h3>
+            </div>
+            <div id="card-body">
+                <img src="assets/future-supercars.webp" alt="" width="100%" height="200">
+                <p>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-half"></span>
+                </p>
+                <p class="bi bi-currency-rupee">8000000.44</p>
+            </div>
+            <div id="card-footer">
+                <button><span class="bi bi-cart4"></span>Add to Cart</button>
+            </div>    
+        </div>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldset and Legend</title>
+    <style>
+        dl{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        dt{
+            font-weight: bold;
+            margin: 10px 10px ;
+        }
+        legend{
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid black;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 2px 5px 5px grey;
+            background-color: black;
+            color: white;
+        }
+        fieldset{
+            box-shadow: 3px 2px 5px grey;
+            margin-bottom: 20px;
+        }
+        legend{
+            box-shadow: 3px 2px 5px grey;
+        }
+        dt{
+            text-shadow: 5px 3px 1px grey;
+        }
+        h1{
+            text-align: center;
+            text-shadow: 3px 3px 4px black;
+            color: orangered;
+            box-shadow: 5px 4px 3px grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>PRODUCT CATALOG</h1>
+    <fieldset>
+        <!-- legend alignment can be right, center or left -->
+        <legend>Basic Details </legend>
+        <dl>
+            <dt>Name</dt>
+            <dd>Sumsung</dd>
+            <dt>Price</dt>
+            <dd>600000</dd>
+        </dl>
+    </fieldset>
+    <fieldset>
+        <legend>Shipping Details</legend>
+        <dl>
+            <dt>Stock</dt>
+            <dd>Available</dd>
+            <dt>Shipped to.</dt>
+            <dd>Delhi</dd>
+            <dt>Vendor</dt>
+            <dd>Reliance Digital</dd>
+        </dl>
+    </fieldset>
+
+
+    <!-- shadow property for container : 
+        box-shadow : horiontal vertical blur color;
+
+        shadow property for text : 
+        text-shadow: 5px 3px 1px grey;
+    -->
+</body>
+</html>

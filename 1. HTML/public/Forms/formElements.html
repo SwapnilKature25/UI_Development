@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get">
+        <dl>
+            <dt>User Name</dt>
+            <dd>
+                <!-- value attribute are submitted on to server  however placeholder did not submit. -->
+
+                <!-- <input type="text" name="UserName" value="Your_FullName"  placeholder="Name in Block Letters"> -->
+
+                <!-- <input type="text" name="UserName"  placeholder="Name in Block Letters"> -->
+
+                <!-- readonly is not changeable but can be submitted on server -->
+                <input type="text" required name="UserName" value="John" readonly autofocus >
+
+                <!-- disable not changeable and it is not submitted on server -->
+                <!-- <input type="text" name="UserName" value="disable" disabled > -->
+                <br> <br>
+            </dd>
+            <dd>
+                PIN : 
+                <input type="text" name="Pin" size="20" autofocus required>
+            </dd>
+            <br>
+            <dt>Minlength and maxlength   : </dt>
+            <dd><input type="text" pattern="[A-Z]{5,10}"  minlength="5" maxlength="10" placeholder="length">
+            </dd>
+            <dt>Mobile</dt>
+            <dd>
+                <!-- pattern="[0-9]{4,10}  => min=4, max=10 -->
+                <input type="number" name="Mobile" pattern="[0-9]{10}">
+            </dd>
+        </dl>
+        <button>Register</button>
+    </form>
+</body>
+</html>

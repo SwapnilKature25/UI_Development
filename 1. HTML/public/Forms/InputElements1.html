@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Input Elements</title>
+    <style>
+        ul{
+            /* display: grid;
+            grid-template-columns: 6fr 6fr; */
+            list-style: none;
+            border: 2px solid;
+            padding: 5px;
+            height: 100px;
+            width: 150px;
+            overflow: auto;
+        }
+
+        #terms{
+            width: 400px;
+            height: 200px;
+            padding: 2px;
+            overflow: auto;
+            margin-bottom: 10px;
+        }
+        /* til ~ means adjacent tag */
+        #accept~span{
+            color: red;
+
+        }
+        #accept:checked~span{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    1. text
+    2. Password , 
+    3. Number, 
+    4. Range, 
+    5. date, 
+    6. email, 
+    7. url, 
+    8. file
+    9. color
+    10. radio
+    11. checkbox
+    -->
+    <h2>Register user </h2>
+    <form  method="get">
+        <dl>
+            <!-- 1. text -->
+            <dt>User Name</dt>
+            <dd>
+                <input type="text">
+            </dd>
+
+            <!-- 2. password -->
+            <dt>Password</dt>
+            <dd>
+                <input type="password" min="4" max="8">
+            </dd>
+
+            <!-- 3. number -->
+            <dt>Age</dt>
+            <dd>
+                <!-- e is only allowed in number beacuse of it is exponent -->
+                <input type="number" min="4" max="
+                10" step="0.5" value="10"  name="age" >
+            </dd>
+
+            <!-- 4. Range input element -->
+             <!-- range are sliders used in for ex. hdfc bank loan page -->
+            <dt>Price </dt>
+            <dd>
+                <input type="range" min="15" max="25" value="16" step="0.1" name="range">
+            </dd>
+
+
+            <!-- 5. Date input element -->
+             <dt>Departure Date</dt>
+             <dd>
+
+                <!-- only date
+                 You can restrict the date using maximum and minimum 
+                 value attribute is used to display by default value.
+                 -->
+                <input type="date" min="2021-11-05" max="2024-07-29" value="2024-05-02" name="departure">
+                <!-- <input type="date" min="05-11-2021" max="29-2-2024" name="departure">     not valid min and max date here-->
+
+
+                <!-- datetime-local replaced with datetime used for date and time
+                    datetime is removed in latest version. 
+                -->
+                <input type="datetime" name="departure">
+                <input type="month" name="departure">
+                <input type="week" name="departure">
+             </dd>
+
+
+             <!-- 6. email -->
+             <dt>Your Email : </dt>
+             <dd>
+                <input type="email" name="email">
+             </dd>
+
+
+
+             <!-- 7. url -->
+             <dt>Your Website : </dt>
+             <dd>
+                <!-- it takes data with only http also which is not according to the requirement so to overcomme it we have to use our own validation using js. -->
+                <input type="url" name="url">
+             </dd>
+
+
+
+
+             <!-- 8. file -->
+             <dt>Upload your Resume</dt>
+             <dd>
+                <!-- we can select single or multiple file
+                    we can set restrictions on file type also 
+                -->
+                <!-- <input type="file" name="resume"> -->
+                <input type="file" multiple name="resume" accept=".jpg, .pdf">
+             </dd>
+             
+
+
+
+            <!-- 9. color -->
+            <dt>Color </dt>
+            <dd>
+                <input type="color" value="#fff">
+            </dd>
+
+
+
+
+            <!-- 10. radio  => checked , name, value -->
+            <dt>Select Gender  </dt>
+            <dd>
+                <!-- if value is not defined by deafult it will submit on on server. -->
+                <input type="radio" value="male"  name="gen" checked> Male
+                <input type="radio" value="female" name="gen"> Female
+            </dd>
+
+
+
+
+            <!-- 11. checkbox -->
+            <dt>Select Courses </dt>
+            <dd>
+                <input type="checkbox" name="courses" value="Oracle"> Oracle
+                <input type="checkbox" name="courses" value="Full Stack"> Full Stack
+                <input type="checkbox" name="courses" value=".NET"> .NET
+            </dd>
+            <dd>
+                <ul>
+                    <li><input type="checkbox" name="courses" value="Oracle" checked> Oracle</li>
+                    <li><input type="checkbox" name="courses" value="Full Stack"> Full Stack</li>
+                    <li><input type="checkbox" name="courses" value=".NET"> .NET</li>
+                    <li><input type="checkbox" name="courses" value="Oracle" checked> Oracle</li>
+                    <li><input type="checkbox" name="courses" value="Full Stack"> Full Stack</li>
+                    <li><input type="checkbox" name="courses" value=".NET"> .NET</li>
+                    <li><input type="checkbox" name="courses" value="Oracle" checked> Oracle</li>
+                    <li><input type="checkbox" name="courses" value="Full Stack"> Full Stack</li>
+                    <li><input type="checkbox" name="courses" value=".NET"> .NET</li>
+                    <li><input type="checkbox" name="courses" value="Oracle" checked> Oracle</li>
+                    <li><input type="checkbox" name="courses" value="Full Stack"> Full Stack</li>
+                    <li><input type="checkbox" name="courses" value=".NET"> .NET</li>
+                </ul>
+            </dd>
+        </dl>
+
+        <button>Register</button>
+
+        <br><br><br>
+
+
+
+
+
+        <h2>Terms and Services</h2>
+        <div id="terms">
+            <h2>Our Terms and Conditions</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dignissimos, facilis velit ut veniam voluptate adipisci quam nulla? Porro ratione at illo? Vel nobis cumque eaque facere qui odit placeat quisquam quidem velit molestias hic, architecto perferendis! Nam rem cupiditate alias quo expedita, nihil quas, impedit corporis consequatur assumenda iste id quae tempore. Voluptates impedit consequuntur eaque officia est obcaecati, veritatis repellat blanditiis non, illum aliquid vero nam sed distinctio cupiditate. Sequi praesentium qui repellendus. Laudantium impedit molestias sapiente non! Laborum itaque nulla nobis quae facere dolorum, inventore quibusdam commodi excepturi illum reiciendis rerum velit eos accusamus omnis officia nesciunt!</p>
+
+        </div>
+        <div  >
+            <input class="bi bi-toggle-on" type="checkbox" id="accept" > <span>I Accept</span>
+        </div>
+        <br><br><br><br>
+    </form>
+</body>
+</html>

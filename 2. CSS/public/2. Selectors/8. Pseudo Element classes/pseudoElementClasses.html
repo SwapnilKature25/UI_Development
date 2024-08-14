@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element Classes</title>
+    <style>
+        ol{
+            list-style: none;
+            display: flex;
+        }
+        /* li::after{
+            content: "नंतर";
+        } */
+
+
+        li::before{
+            content: " नंतर";
+        }
+        li:first-child::before{
+            content: "Site Map =>  ";
+        }
+
+        p::first-letter{
+            font-size: 50px;
+            font-family:  Helvetica, sans-serif;
+            color: red;
+            float: left;
+            font-weight: bold;
+        }
+        p::first-line{
+            color: gold;
+        }
+        p::selection{
+            background-color: yellow;
+        }
+
+        #Username::placeholder{
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Blog</li>
+    </ol>
+
+    <div>
+        Name  : <input type="text"  id="Username" placeholder="Name in Block Letters">
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, fugit? Corrupti, suscipit nihil illo asperiores hic optio impedit natus temporibus? ipsum dolor sit, amet consectetur adipisicing elit. Maxime, ipsum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempore veniam deserunt eum itaque ipsam totam exercitationem. Nisi quo sunt repellat sit quibusdam minima explicabo quos soluta, provident necessitatibus accusantium in eaque animi consectetur sed qui veritatis iusto reprehenderit veniam, ipsa fuga alias esse id autem? Suscipit ipsam commodi beatae. </p>
+</body>
+</html>

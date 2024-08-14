@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intra Links</title>
+    <style>
+        .topic{
+            border: 2px solid black;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        /* target indicates how it should appear when it becomes target of any links*/
+        .topic:target{ 
+            background-color: black;
+            color: white;
+        }
+        .topic:hover{
+            background-color: grey;
+            color: black;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            /* column-gap: 20px; */
+            
+        }
+        li{
+            font-size: 20px;
+            margin-right: 30px;
+             
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration:overline;
+        }
+        /* a:link{
+            color: brown;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        a:visited{
+            color:rgb(17, 48, 185);
+        }
+        a:active{
+            color: red;
+        } */
+
+        a{
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        li{
+            border: 2px solid black;
+            border-radius: 20px;
+            background-color: tomato;
+            color: white;
+            padding: 5px;
+            width: 200px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        li:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="#html">HTML</a> </li>
+            <li><a href="#css">CSS</a> </li>
+            <li><a href="#js">JAVASCRIPT</a> </li>
+            <li><a href="#mens">Mens Clothing</a></li>
+        </ul>
+    </div>
+    <div class="topic" id="html">
+        <h2>HTML</h2>
+        <p>It is a Markup language</p>
+    </div>
+    <div class="topic" id="css">
+        <h2>CSS</h2>
+        <p>It defines styles for Html</p>
+    </div>
+    <div class="topic" id="js">
+        <h2>JavaScript</h2>
+        <p>It is a language for handling client interactions</p>
+    </div>
+    
+</body>
+</html>

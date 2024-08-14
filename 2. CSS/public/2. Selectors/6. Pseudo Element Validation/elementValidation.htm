@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element Validation</title>
+    <style>
+        #user{
+            border: none;
+        outline: none;
+        }
+        #user:required{
+            border: 2px solid red;
+            box-shadow: 2px 2px 3px red;
+        }
+        #user+span{
+            display: none;
+        } 
+        #user:required+span{
+            display: block;
+            color: grey;
+        }
+        #user:valid+span{
+            display: none;
+        }
+        /* if required not written then optional will execute */
+        #user:optional{
+            border: 2px solid gold;
+            box-shadow: 2px 2px 3px gold;
+        }
+
+
+
+
+       #Mobile{
+        border: none;
+        outline: none;
+       }
+        #Mobile:valid{
+            border: 2px solid green;
+            box-shadow: 2px 2px 2px green;
+        }
+        #Mobile:invalid{
+            border: 2px solid red;
+            box-shadow: 2px 2px 2px red;
+        }
+        #Mobile:valid+span{
+            display: none;
+        }
+        #Mobile:invalid+span{
+            display: block;
+            color: grey;
+        }
+
+        
+
+
+        #age{
+            border: none;
+            outline: none;
+        }
+        #age:in-range{
+            border: green;
+            box-shadow: 2px 2px 3px green;
+        }
+        #age:out-of-range{
+            border: red;
+            box-shadow: 2px 2px 3px red;
+        }
+        #age:in-range+span{
+            display: none;
+        }
+        #age:out-of-range+span{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <dl>
+        <dt>Username : </dt>
+        <dd><input type="text" id="user" required>
+        <span>Name Required</span>
+        </dd>
+        <button>Submit</button>
+    </dl>
+
+    <br><br><br>
+
+    <dl>
+        <dt>Mobile</dt>
+        <dd>
+            <input type="text" id="Mobile" value="+91" pattern="\+91\d{10}">
+            <span>Invalid Mobile</span>
+        </dd>
+    </dl>
+
+
+
+    <br><br><br>
+
+    <dl>
+        <dt>Age</dt>
+        <dd>
+            <input type="number" min="10" max="20" id="age">
+            <span>Age should b/w 10 to 20</span>
+        </dd>
+    </dl>
+</body>
+</html>

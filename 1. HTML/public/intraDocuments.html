@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlinks types </title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+     /* hidden = extra content hides  , scroll => when we adjust width both vertical and horizontal bar will come, auto => get only scroll bar needed for situation  */
+
+        #rightPanel{
+            height: 720px;
+            overflow: auto;
+        }
+        span{
+            color: green;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Intra documents links -->
+     <div id="container">
+        <div id="leftPanel">
+            <ul>
+                <li> <a href="#home" >Home</a></li>
+                <li> <a href="#electronics" >Electronics</a></li>
+                <li> <a href="#cars" >Cars</a></li>
+                <li> <a href="#machines" >Machines</a></li>
+            </ul>
+        </div>
+        <div id="rightPanel">
+            <h2 id="home">Home</h2>
+            <img src="assets/matt-antonioli-3akA0XDg1_g-unsplash.jpg" width="300">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ex necessitatibus est, recusandae fugit illo at veritatis quasi rem voluptates doloribus nulla dicta consequatur voluptatem excepturi. Incidunt repellendus deserunt labore minus quidem harum nostrum perspiciat is omnis. Perspiciatis eius porro, tenetur laborum quasi illo dolores eligendi quas deserunt minima molestias nobis?</p>
+            <p>Lorem ipsum dolor <span>Great <a href="#offers">Offer</a> Prices on Cars like <a href="#bugatti">Bugatti</a> </span> sit amet consectetur adipisicing elit. Eos, repellat?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+
+            <h2 id="electronics">Electronics</h2>
+            <img src="assets/Lamborghini.jpg" width="300" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ex necessitatibus est, recusandae fugit illo at veritatis quasi rem voluptates doloribus nulla dicta consequatur voluptatem excepturi. Incidunt repellendus deserunt labore minus quidem harum nostrum perspiciatis omnis. Perspiciatis eius porro, tenetur laborum quasi illo dolores eligendi quas deserunt minima molestias nobis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis pariatur quae a perferendis eveniet perspiciatis doloremque. Nihil quas doloribus eius, saepe itaque illum aliquid minus obcaecati aliquam dolores assumenda harum iure quae. Ut quod tenetur repellat temporibus impedit, officiis esse animi hic et id earum quis non, recusandae eveniet repudiandae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+            
+            <h2 id="cars">Cars</h2>
+            <img src="assets/gold-cars-he7mksbyxdscbmbp.jpg" width="300" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ex necessitatibus est, recusandae fugit illo at veritatis quasi rem voluptates doloribus nulla dicta consequatur voluptatem excepturi. Incidunt repellendus deserunt labore minus quidem harum nostrum perspiciatis omnis. Perspiciatis eius porro, tenetur laborum quasi illo dolores eligendi quas deserunt minima molestias nobis?</p>
+            <ol id="offers">
+                Offers
+                <li>10% discount on Sports Car</li>
+                <li>Diwali Offer on cars</li>
+            </ol>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ex necessitatibus est, recusandae fugit illo at veritatis quasi rem voluptates doloribus nulla dicta consequatur voluptatem excepturi. Incidunt repellendus deserunt labore minus quidem harum nostrum perspiciatis omnis. Perspiciatis eius porro, tenetur laborum quasi illo dolores eligendi quas deserunt minima molestias nobis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+
+            <h2 id="machines">Machines</h2>
+            <img src="assets/RR_Bugatti_Chiron_Super_Sport.webp" width="300" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ex necessitatibus est, recusandae fugit illo at veritatis quasi rem voluptates doloribus nulla dicta consequatur voluptatem excepturi. Incidunt repellendus deserunt labore minus quidem harum nostrum perspiciatis omnis. Perspiciatis eius porro, tenetur laborum quasi illo dolores eligendi quas deserunt minima molestias nobis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ex necessitatibus est, recusandae fugit illo at veritatis quasi rem voluptates doloribus nulla dicta consequatur voluptatem excepturi. Incidunt repellendus deserunt labore minus quidem harum nostrum perspiciatis omnis. Perspiciatis eius porro, tenetur laborum quasi illo dolores eligendi quas deserunt minima molestias nobis?</p>
+            <figure>
+                <figcaption id="bugatti">Bugatti</figcaption>
+                <img src="assets/RR_Bugatti_Chiron_Super_Sport.webp" width="300">
+            </figure></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellat?</p>
+        </div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+    <style>
+        /*  ^=  starts with */
+        p[class^="effects"]{
+            background-color: red;
+        }
+        
+        /* $=   ends with  */
+        p[class$="effects"]
+        {
+            background-color: cyan;
+        }
+
+
+        /* *=   any occurance (wherever effects occur ) */
+        /* p[class*="effects"]{
+            background-color: green;
+        } */
+
+
+        /*  |=    uses space 
+            it is no longer in use.
+        */
+        /* p[class|="effects"] */
+
+
+        /*  ~=   if before space is their and '-' */
+        p[class~="effects"]
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Attributes Conditions for values</h2>
+    <p class="effects">Para - 1</p>
+    <p class="effectsPara">Para - 2</p>
+    <p class="paraeffects">Para - 3</p>
+    <p class="para effects">Para - 4</p>
+    <p class="para-effects">Para - 5</p>
+</body>
+</html>

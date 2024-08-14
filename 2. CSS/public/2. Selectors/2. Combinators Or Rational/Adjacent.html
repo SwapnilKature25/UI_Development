@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjacent selectors</title>
+    <style>
+        h2+p{
+            color: red;
+        }
+
+        /* div>p{
+            background-color: violet;
+        } */
+         
+        div p{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Adjacent Selector => which comes after it    -->
+    <h2>Web Terminology</h2>
+    <p>Para - 1</p>
+    <p>Para - 2</p>
+    <p>Para - 3</p>
+    <h2>Web Terminology</h2>
+    <p>Para - 4</p>
+    <p>Para - 4</p>
+    <div>
+        <p>Technologies</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi facilis voluptatem reiciendis praesentium dolores debitis quam mollitia atque dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, consequuntur?</p>
+
+    </div>
+    
+</body>
+</html>

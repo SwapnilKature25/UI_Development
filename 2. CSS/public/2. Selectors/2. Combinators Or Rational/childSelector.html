@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Selector</title>
+    <style>
+        div > p{
+            color: red;
+        }
+        div > blockquote > p{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <!-- child selector : it applies effect to direct child. -->
+    <div>
+        <p>Para - 1</p>
+        <p>Para - 2</p>
+        <p>Para - 3</p>
+        <blockquote>
+            <p>Para - 4</p>
+            <p>Para - 5</p>
+        </blockquote>
+    </div>
+</body>
+</html>

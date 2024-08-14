@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Entities</title>
+    <style>
+        pre{
+            background-color: grey;
+            width: 400px;
+            padding: 20px;
+            color: white;
+        }
+        var{
+            color: red;
+        }
+        blockquote{
+            margin-left: 200px;
+            margin-right: 200px;
+            font-style: italic;
+            text-align: justify;
+        }
+    </style>
+    <script>
+        function bodyload(){
+            alert("Total no. of Headings "+document.getElementsByTagName("h2").length);
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+
+    <!--  1. LineBreak element   =>  <br>   -->
+     <p>It is used to print the data on next Line. <br>
+        As it has by editor so we use br elements.
+    </p>
+
+    <!-- 2.  whitespaces   =>  &nbsp;   -->
+    <!-- <h2>HTML C &nbsp; &nbsp; &nbsp;S S</h2> -->
+
+
+
+    <!-- 3.  pre tag   => <pre> </pre>   -->
+     <div>
+        <h2>C Program : </h2>
+        <pre>
+            #include &lt;stdio.h&gt;
+            main()
+            {
+                printf("It's Pre tag example");
+            }
+        </pre>
+     </div>
+
+
+
+
+     <!-- 4.  code tag   => <code>  </code>  -->
+     <div>
+        <!-- code elements shows that within it their is code -->
+        <code>
+            <!-- pre optional -->
+            <pre>
+                var x=10;
+                var y=20;
+                var z=x+y;
+            </pre>
+        </code>
+     </div> 
+
+
+
+     <!--  5.  Variables   =>  <var>  </var>   -->
+
+     var <var>Username</var>= "John"; <br>
+     var <var>email</var>= "John@gmail.com"; <br>
+
+
+
+     <!-- 6.  Title attribute   =>  title   -->
+      <h3>Test your web project on <span title="It resembles software & Hardware.It satisfies client request.">server</span>*.</h3>
+
+
+
+      <!-- 7.  heading   => h1 to h6  =>   <h1> </h1>    -->
+       <h2>HTML</h2>
+       It is a Markup Language 
+       <h2>Normal Elements</h2>
+       They return presentation directly on callback <br>
+       <font size="5"><b>RC Data Elements</b></font> <br>
+       They return presentation directly on callback <br>
+
+
+
+       <!-- 8.  Paragraph & Blockquotes     => <blockquotes>   </blockquotes>  < -->
+        <blockquote>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ea doloribus odit laborum reprehenderit quia magni aut ipsam voluptas, minus, facere, error velit. Libero accusamus doloribus, veritatis aut rem placeat quia iure molestiae necessitatibus ipsa consequatur tenetur, distinctio totam. Ab iusto neque deserunt fuga? Accusantium inventore laudantium unde facere et provident harum suscipit quia error, eveniet sapiente neque explicabo aspernatur, pariatur quasi, tempora fugit velit dolor! Beatae, sed ut numquam necessitatibus dolorum consectetur enim, asperiores eius alias dolore eligendi voluptatibus, voluptas officiis deserunt. Libero ipsum corrupti aperiam officiis, praesentium hic esse cum consequatur aut tempora nobis at voluptates quaerat nostrum!
+        </blockquote>
+        <blockquote>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit maiores totam recusandae, saepe eius quia eligendi vitae expedita inventore sint ullam, nihil eos voluptates culpa debitis dolorem consequuntur molestias illum officiis voluptas animi atque. Dolorum id a iure at reprehenderit voluptates placeat, error vel debitis earum culpa quam suscipit illum unde minus nostrum voluptas asperiores iste ex beatae quibusdam! Architecto exercitationem magnam, unde iure odio eos consequatur est quasi labore dignissimos aperiam minus ut nobis quam sit, culpa sint reprehenderit aliquam laboriosam, sunt deserunt. Id eveniet labore quas impedit, suscipit et eaque, modi ut accusantium totam commodi architecto, nesciunt fuga!
+        </blockquote>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structural Pseudo Classes</title>
+    <style>
+        li:first-child{
+            color: red;
+        }
+        li:last-child{
+            color: red;
+        }
+        /* it will apply to every 2nd occurrence if 3n then every 3rd occurrence */
+        /* li:nth-child(2n){
+            color: gold;
+        } */
+        /* every 3rd occurrence but starting with 1st */
+        /* li:nth-child(3n+1){ */
+        /* li:nth-child(3n+2){
+            color: cyan;
+        } */
+        /* li:nth-child(even){
+            color: cyan;
+        } */
+
+
+        /* from bottom 1st one to every 2nd occurance it will apply */
+        li:nth-last-of-type(2n+1){
+            color: rgb(243, 144, 24);
+        }
+
+
+
+
+
+        tbody tr:nth-child(even)
+        {
+            background-color: rgb(150, 207, 207);
+        }
+
+        tbody tr:nth-child(odd)
+        {
+            background-color: pink;
+        }
+
+        thead tr{
+            background-color: rgb(227, 90, 90);
+        }
+
+        td:empty{
+            background-color: grey;
+        }
+
+        :root{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+        <li>Item-6</li>
+        <li>Item-7</li>
+        <li>Item-8</li>
+    </ol>
+
+
+    <table border="2" width="200">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mobile</td>
+                <td>230000</td>
+            </tr>
+            <tr>
+                <td>TV</td>
+                <td>20000</td>
+            </tr>
+            <tr>
+                <td>Shoe</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>Watch</td>
+                <td>2300</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <!-- empty means single space also not allowed  -->
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

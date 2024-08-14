@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+    <style>
+        #userName:read-only{
+            background-color: greenyellow;
+        }
+        button:enabled{
+            background-color: brown;
+            color: wheat;
+            cursor:grab;
+        }
+        button:disabled{
+            background-color: red;
+            color: white;
+            cursor: not-allowed;
+        }
+
+
+        #check:checked+span{
+            color: green;
+        }
+        #check+span{
+            color: red;
+        }
+
+
+        #user+span{
+            display: none;
+        }
+        #user:focus + span{
+            /* display: block; */
+            display: inline;
+        }
+        #user:focus{
+            border: 2px solid red;
+            box-shadow: 2px 2px 2px 2px   red;
+        }
+
+
+
+
+
+        #User:read-only{
+            background-color: red;
+        }
+
+
+        #btn:enabled{
+            background-color: cyan;
+            color: black;
+            cursor:crosshair;
+        }
+        #btn:disabled{
+            background-color: rgb(230, 163, 163);
+            color: white;
+            cursor: not-allowed;
+        }
+
+        #regulation:checked+span{
+            color: green;
+        }
+
+        #regulation+span{
+            color: red;
+        }
+
+        #focusUser+span{
+            display: none;
+        }
+        #focusUser:focus+span{
+            display: block;
+            font-size: 14px;
+            color: grey;
+        }
+        #focusUser:focus {
+            border:2px solid red;
+            box-shadow: 2px 3px 2px grey;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registered User</h2>
+    <dl>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" id="userName" value="John" readonly>
+        </dd>
+    </dl>
+    <button disabled>Registered</button>
+    <br><br>
+    <!-- checked -->
+    <fieldset>
+        <legend>Terms and Conditions</legend>
+        <h2>Terms of Service</h2>
+        <div class="form-check">
+          <input type="checkbox" id="check" > <span>I Accept</span>
+          </label>
+        </div>
+    </fieldset>
+
+    <!-- focused -->
+     <dl>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" id="user" placeholder="Name in Block Letters">
+            <span>Name in Block Letters Only</span>
+            <!-- we give here span because we want to display above text at the time of writing to know what exact to write. -->
+        </dd>
+     </dl>
+
+
+
+
+
+
+     <br><br><br>
+
+     <form action="">
+        <label for="">Username : </label>
+        <input type="text" id="User"  placeholder="ReadOnly" readonly >  <br>
+        <input type="submit" id="btn" value="Submit" enabled disabled> 
+     </form>
+
+
+     <fieldset>
+        <legend>Terms & Regulations</legend>
+        <h2>Terms of Services</h2>
+        <input type="checkbox" id="regulation" ><span> Accept</span>
+     </fieldset>
+
+
+     <h3>Login</h3>
+     <dt>User Name</dt>
+     <dd>
+        <input type="text" id="focusUser" placeholder="Enter your name in Letters" >
+        <span>Name in Block Letters Only</span>
+     </dd>
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <!-- Regular Expression
+        a. Meta characters
+        b. Quantifiers 
+    -->
+    <h2>Meta characters</h2>
+    <form>
+        <!-- ? -->
+        <!-- Test : <input type="text" pattern="colou?r" placeholder="Enter color or colour" name="test"> -->
+        
+        <!-- + -->
+        <!-- Test : <input type="text" pattern="colou+r" placeholder="Enter color or colour" name="test"> -->
+        
+        <!-- * -->
+        <!-- Test : <input type="text" pattern="colou*r" placeholder="Enter color or colour" name="test"> -->
+         
+        <!-- . -->
+        <!-- Test : <input type="text" pattern=".at" placeholder="Enter color or colour" name="test"> -->
+        
+        <!-- | [pipe] -->
+        <!-- Test : <input type="text" pattern="red|green|blue" placeholder="Enter RGB color name" name="test"> -->
+        
+        <!-- \d  => specifies numeric value-->
+        <!-- Test : <input type="text" pattern="\d" placeholder="Enter Numeric value" name="test">
+        Test : <input type="text" pattern="\d\d" placeholder="Enter Numeric value" name="test"> -->
+        
+        <!-- \D  => specifies non-numeric value -->
+        <!-- Test : <input type="text" pattern="\D\D" placeholder="Enter RGB color name" name="test"> -->
+        
+        <!-- \w  => alpha numeric with underscore value -->
+        <!-- Test : <input type="text" pattern="\w" placeholder="Enter alpha numeric with underscore " name="test"> -->
+        <!-- Test : <input type="text" pattern="\w\w" placeholder="Enter alpha numeric with underscore " name="test"> -->
+        
+        <!-- \W  => alpha numeric with underscore value -->
+        <!-- Test : <input type="text" pattern="\W" placeholder="Enter alpha numeric with underscore " name="test"> -->
+        <!-- Test : <input type="text" pattern="\W\W" placeholder="Enter alpha numeric with underscore " name="test"> -->
+        <!-- Test : <input type="text" pattern="\w\w\W" placeholder="Enter alpha numeric with underscore " name="test"> -->
+        
+        <!-- \s  => single blank space  (space in url convert to +)-->
+        <!-- Test : <input type="text" pattern="\d\d\s\w" placeholder="Enter value with space" name="test"> -->
+        
+        <!-- \i  => Ignore case -->
+        <!-- Test : <input type="text" pattern="color\i" placeholder="Enter value with space" name="test"> -->
+        
+        <!-- [a-z]  => only lower case alphabet -->
+        <!-- Test : <input type="text" pattern="[a-z]" placeholder="Enter value with space" name="test"> -->
+         
+        <!-- [A-Z]  => only upper case alphabet -->
+        <!-- Test : <input type="text" pattern="[A-Z]" placeholder="Enter value with space" name="test"> -->
+        Test : <input type="text" pattern="[A-Z]{4,10}" placeholder="Enter value with space" name="test">
+        
+        <button>Register</button>
+    </form>
+
+
+    <H3>Quantifiers</H3>
+    <form action="">
+        <!-- Credit Card Number : -->
+        <!-- <input type="text" pattern="\d{16}" name="creditno"> -->
+         Date :
+        <!-- <input type="text" pattern="\d{2}-\d{2}-\d{4}" name="date"> -->
+        <!-- <input type="text" pattern="\d{2}|{1}-\d{2}-\d{4}" name="date"> -->
+        <button>Register</button>
+
+
+        <!-- Query 1 : name only uppercase letters 4 to 15 chars -->
+        Test : <input type="text" pattern="[A-Z]{4,10}" placeholder="Enter value" name="test">
+        
+        <!-- Query 2 : Password alpha numeric with _ and special chars, range 4 to 15 chars -->
+        <!-- Test : <input type="text" pattern="\w[@#$!%] " placeholder="Enter value with space" name="test"> -->
+        Test : <input type="text" pattern="\w[@#$]{4,15} " placeholder="Enter value" name="test">
+        
+        <!-- Query 3 : Bank IFSC code SBI9999HY -->
+        Bank ID : <input type="text" pattern="SBI\d{4}[A-Z]{2}" placeholder="Enter value" name="test">
+        
+        <!-- Query 4 : mobile number starting with +91 -->
+        Mob no : <input type="text" pattern="\+91\d{10}" placeholder="Enter value" name="test">
+        
+        <br>
+        <!-- Query 5 : password 4 to 15 chars with at least one uppercase letter. -->
+        Password : <input type="password" pattern="(?=.*[A-Z])\w{4,15}" placeholder="Enter value" name="password">
+        
+        <br>
+        <!-- Query 6 : password 4 to 15 chars with at least one special char. -->
+        Special char : <input type="text" pattern="(?=.*[!@#$%^])\w[!@#$%]{4,15}" placeholder="Enter value" name="specialChar">
+        
+        <br>
+        <!-- Query 7 : password 4 to 15 chars with at least one Uppercase letter, number and special char. -->
+        Password : <input type="text" pattern="(?=.*[A-Z0-9!@#$%^])\W[!@#$%^]{4,15}" placeholder="Enter value" name="Chars">
+        
+        <br>
+        <!-- Query 8 : Write Regular expression to validate email address. -->
+        Email : <input type="text" pattern="\w{2,10}\@\w{3,5}\.\w{3}" placeholder="Enter value" name="email">
+        <BUTTon>Register</BUTTon>
+    </form>
+</body>
+</html> 

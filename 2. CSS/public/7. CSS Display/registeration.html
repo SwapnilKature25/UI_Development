@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        .container{
+            display: flex;
+            height: 500px;
+            justify-content: center;
+            /* baseline = it will be on top */
+            /* align-items: baseline; */
+            /* stretch is not suitable here because some more content should be there to use it.  */
+            align-items: stretch;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            Password : 
+            <input type="password" name="password" pattern="(?=.*[A-Z])\w(4,15)">
+            <button>Register</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id selector</title>
+    <style>
+        #backeffect{
+            background-color: yellow;
+        }
+        #coloreffect{
+            color: rgb(231, 24, 24);
+        }
+        #bordereffect{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- multiple id's not allowed -->
+    <h2 id="backeffect"  id="coloreffect" >Web Technologies</h2>
+    <h2 id="coloreffect">HTML</h2>
+    <p>It is a Markup lang</p>
+    <!-- not allowed -->
+    <!-- <h2 id="bordereffect coloreffect">JavaScript</h2> -->
+    <h2 id="bordereffect">JavaScript</h2>
+    <p>It Handles Client side interactions.</p>
+    <h2>jQuery</h2>
+    <p>It is a Client Side Library</p>
+</body>
+</html>

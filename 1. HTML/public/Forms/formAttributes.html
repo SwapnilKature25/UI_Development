@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Attributes</title>
+    <style>
+        form{
+            width: 300px;
+            height: 300px;
+            border: 2px solid;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Register User</h2>  
+    <!-- default method is GET 
+        to see inputed data of user go click on inspect and go on network then click on webpage name. 
+    -->
+     <!-- <form method="POST">             
+        it will show erroe : method not allowed because there is no server side technology which can collect your data and use it for that we have to use server side technology. -->
+
+     <!-- <form method="GET" action="register.jsp">      
+        Password :
+        <input type="password" name="password" >
+        <button>Register</button>
+
+     </form> -->
+
+     <!--  novalidate => it is given to ignore validation -->
+     <!-- 
+     <form method="GET" novalidate>      
+         Password :
+         <input type="password" name="password" required>
+         required is used for validation -->
+         
+         
+    <form method="GET" >      
+        <!-- in email validation it validate emails like swap@c which is not according to our requirement. 
+             to handle this we need to suppress this validation and use our own validations using js,php,.. and suppress use novalidate.
+        -->
+        <!-- your email :
+        <input type="email" name="email" required> <br> -->
+
+        <!-- same for phone number it allow all values string , any number so it is not correct validation  -->
+        Your Phone :
+        <input type="number" name="phoneno" required>
+        <button>Register</button>
+
+     </form>
+</body>
+</html>

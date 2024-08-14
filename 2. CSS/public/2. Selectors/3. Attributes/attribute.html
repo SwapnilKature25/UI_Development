@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selectors</title>
+    <style>
+        input[type="button"]{
+            background-color: yellow;
+        }
+        input[type="password"]
+        {
+            background-color: grey;
+            border-radius: 15%;
+        }
+
+        p[id]
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User NAme</dt>
+            <dd><input type="text"></dd>
+            <dt>Password</dt>
+            <dd><input type="password"></dd>
+        </dl>
+        <input type="button" value="login">
+        <input type="button" value="Cancel">
+    </form> <br>
+
+    <p id="p1">Para - 1</p>
+    <p>Para - 2</p>
+    <p id="p3">Para - 3</p>
+    <p>Para - 4</p>
+</body>
+</html>

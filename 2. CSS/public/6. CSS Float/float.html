@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+        }
+        #rightBanner{
+            width: 400px;
+            height: 400px;
+            float: right;
+            /* margin-right: 10%; */
+        }
+        #leftBanner{
+            width: 400px;
+            height: 400px;
+            float: left;
+        }
+        .container{
+            margin-top: 100px;
+        }
+
+        .container2{
+            margin-top: 200px;
+        }
+
+        #left-panel{
+            width: 800px;
+        }
+        #right-panel{
+            width: 80%;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../assests/rightBanner.png" id="rightBanner" alt="" >
+        <div id="left-panel">
+            <h1>Enjoy on your TV</h1>
+            <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+        </div>    
+    </div>
+
+    <div class="container2">
+        <img src="../assests/leftBanner.png" id="leftBanner" alt="" >
+        <div id="right-panel">
+            <h1>Download your shows to watch offline</h1>
+            <p>Save your favourites easily and always have something to watch.</p>
+        </div>    
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Demo</title>
+    <style>
+        .container div{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            margin: 20px;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            /*flex-wrap   :    automatically comes to next line when it reaches the border 
+                without wrap the content will shrink.
+                by deafault flex-wrap is nowrap.
+            */
+            flex-wrap: wrap;
+
+
+            /*  flex-direction  :  we can define in row, column or row-reverse and column-reverse. */
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            Box-1
+        </div>
+        <div>
+            Box-2
+        </div>
+        <div>
+            Box-3
+        </div>
+        <div>
+            Box-4
+        </div>
+        <div>
+            Box-5
+        </div>
+        <div>
+            Box-6
+        </div>
+        <div>
+            Box-7
+        </div>
+        <div>
+            Box-8
+        </div>
+    </div>
+    
+</body>
+</html>

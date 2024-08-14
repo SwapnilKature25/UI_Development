@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        /* inside form group the div must be inline for that we will do following thing */
+        .form-group div{
+            /* inline means you r telling the next element how it should display . i.e below or beside */
+            /* inline means if any element is their another element will be beside it */
+            /* to keep the element side by side use inline  */
+            /* display: inline; */
+        }
+        .form-group{
+             /* display: inline; */
+
+             /* block : every div should be one below another for that we will  use block. */
+            display: block;
+
+            /* flex is deciding how to display all the inner contents .
+            whether to display all the inner content side by side or one below another.
+            Inside the container everything will be flexibily arranged  => it means it will arrange according to browser and devices.
+            */
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="form-group">
+        <div>
+            <input type="text" placeholder="User Name">
+        </div>
+        <div>
+            <input type="password" placeholder="Your Password">
+        </div>
+        <div>
+            <button>Login</button>
+        </div>
+    </div>
+</body>
+</html>

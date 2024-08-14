@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter Document Links</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        iframe{
+            width: 100%;
+            height: 700px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div>
+            <ol>
+                <!-- if we want to just downlaod the pdf or image then we can use download attribute with name with which we want to download -->
+                <li><a href="http://www.amazon.in"target="_blank" >Amazon Shopping</a></li>
+                <li> <a href="cardLayout.html"  target="frameBody">NavBar</a> </li> 
+                <li> <a href="assets/lance-asper--pSOAtdMVlk-unsplash.jpg" download="Bugatti" target="_blank">Cars</a></li>
+                <li> <a href="assets/future-supercars.webp" target="frameBody" >Sports Car</a></li>
+                <li> <a href="../src/JavaScript (2).pdf" target="_blank">JS Tutorial PDF</a></li>
+                <li> <a href="../src/Web_Development-FrontEnd.pdf" download>Web Tech Document</a></li>
+        
+                <!-- To open the link target in a separate window by using javascript option  -->
+                 <li><a href="javascript:window.open('assets/Lamborghini.jpg','Lambo', 'width=900 height=700')">Lambor</a></li>
+
+
+                 <li><a href="mailto:swapnilk8767@gmail.com">swapnilk8767@gmail.com</a></li>
+                 <li><a href="tel:8767569497">Call: +918767569497</a></li>
+                 <li><a href="https://www.youtube.com/embed/qb_ks6D6Q4E&list=RDMMqb_ks6D6Q4E&start_radio=1"  target="frameBody">Watch Video</a></li>
+            </ol> 
+        </div>
+        <div>
+            <!-- iframe is used to embed any document into an existing page -->
+            <iframe name="frameBody" src=""></iframe>
+            
+        </div>
+    </div>
+</body>
+</html>
