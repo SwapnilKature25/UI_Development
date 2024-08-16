@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Transforms</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            transition: 2s;
+        }
+        img:hover{
+            /* scale(1) = 100% , 2=200%,... */
+             /* the scale is going to effect on both height & width */
+            transform: scale(3);
+
+            /* the scaleX is going to effect only on wid th */
+            /* transform: scaleX(3); */
+
+             /* the scaleY is going to effect only on Height */
+            /* transform: scaleY(3); */
+
+            /* some browser doesn't suppport the transform then use as below */
+            /* 
+            -webkit-transform: scale(3);
+            -moz-transform: scale(3);
+            -ms-transform: scale(3);     */
+
+            /* how much time it would take to change */
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img src="../assests/nike.webp" alt="">
+        </div>
+    </div>
+</body>
+</html>

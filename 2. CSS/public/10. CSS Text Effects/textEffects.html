@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Test Effects</title>
+    <style>
+        h1{
+            color: tomato;
+            text-shadow: 2px 3px 4px grey;
+        }
+        p{
+            font-style: italic;
+            font-weight: bold;
+            /* effect size  */
+            text-transform: lowercase;
+        }
+
+        div{
+            /* without changing the size */
+            font-variant:small-caps
+        }
+
+        #indent{
+            text-indent: 100px;
+            line-height: 50px;
+            word-spacing: 10px;
+            letter-spacing: 5px;
+        }
+
+        #direction{
+            border: 2px solid black;
+            padding: 5px;
+            text-align: justify;
+            width: 300px;
+            height: 40px;
+            /* text-overflow: below commbination required for text effects ; */
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        #word{
+            /* word-break: break-all; */
+            /* webkit-word-break: break-all; */
+            /* text-orientation:upright; */
+            text-decoration: overline;
+            text-decoration-color: red;
+            text-decoration-style: wavy;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to CSS Text Effects</h1>
+    <p>Welcome to CSS Text Effects</p>
+    <div>Welcome to CSS Text Effects</div>
+    <br>
+    <div id="indent">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae soluta corrupti dolores possimus eius non, quae autem ipsum cumque nihil debitis voluptate consectetur velit natus quibusdam nemo illo. Nisi ab facere eveniet consequatur commodi! Quibusdam molestiae eius pariatur, officiis ducimus velit blanditiis repudiandae esse nesciunt aspernatur iusto mollitia a, nulla corrupti aliquam vitae debitis sint neque, delectus dicta! Dolorum explicabo nobis odit soluta id unde, tempora ex sed natus adipisci illo dicta temporibus eligendi doloremque quod repudiandae. Nemo, quae ab aut mollitia repudiandae eligendi possimus, minus alias voluptate vero temporibus recusandae atque illum nihil molestias molestiae consequatur rem sed deserunt!
+    </div>
+    
+    <div id="direction">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae soluta corrupti dolores possimus eius non, quae autem ipsum cumque nihil debitis voluptate consectetur velit natus quibusdam nemo illo. Nisi ab facere eveniet consequatur commodi! Quibusdam molestiae eius pariatur, officiis ducimus velit blanditiis repudiandae esse nesciunt aspernatur iusto mollitia a, nulla corrupti aliquam vitae debitis sint neque, delectus dicta! Dolorum explicabo nobis odit soluta id unde, tempora ex sed natus adipisci illo dicta temporibus eligendi doloremque quod repudiandae. Nemo, quae ab aut mollitia repudiandae eligendi possimus, minus alias voluptate vero temporibus recusandae atque illum nihil molestias molestiae consequatur rem sed deserunt!
+    </div>
+
+    <div id="word">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temdvbkdnbkdnbkddvsporibus pradvmdnvkndvknvknvknesentium esse deleniti illum officiis quo in maiorscsfvjsjvnsknfkfes et modi, enim architectdvjdvjbdjvbdvjbdvjbo magni sapiente, pariatur labore, unde repudiandae odit obcaecati a illo dolore? Quaerat quidem possimus totam assumenda ad! At, recusandae. Nihil vero numquam, eaque cupiditate adipisci, voluptatum illo molestiae ipsam nobis, error ducimus animi sint. Qui consectetur voluptatibus quos suscipit perspiciatis nemo, deserunt, quasi ullam commodi maiores quidem aliquid quas aperiam voluptatem reprehenderit officiis hic! Repudiandae sit quis deleniti repellendus quisquam ipsa non nisi fuga, consequatur nesciunt perferendis debitis mollitia optio accusamus reprehenderit eaque incidunt enim facilis sapiente. Sit, quidem!</>
+    </div>
+    <br><br><br><br>
+</body>
+</html>

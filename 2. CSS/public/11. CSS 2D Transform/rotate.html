@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 2D Transform</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            transition: 2s;
+        }
+        img:hover{
+
+            /* rotate() */
+
+            /* transform: rotate(-360deg); */
+            /* transform: rotateX(360deg); */
+            /* transform: rotateY(360deg); */
+
+
+
+            /* skew() */
+            /* transform: skew(360deg); */
+            /* transform: skewX(60deg); */
+            /* transform: skewY(60deg); */
+
+
+
+            /* translate() */
+            /* transform: translate(400px);
+            transform: translateX(400px);
+            transform: translateY(400px); */
+            
+
+            transform: translate(400px);
+            transform: rotate(90deg);
+            transform: skew(180deg);
+
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img src="../assests/shirt2.jpg" alt="">
+        </div>
+    </div>
+
+</body>
+</html>
