@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3D transform</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            overflow: hidden;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            transition: 2s;
+            box-shadow: 2px 2px 3px black;
+            border: 1px dotted yellow ;
+        }
+        img:hover{
+            /* 3,3 = width and height */
+            /* scale3d(xPosition, yPosition, zPoistion) */
+           /* transform: scale3d(3,3,5); */
+           transform: rotateY(180deg);
+            transition: 1s;
+            box-shadow: 2px 2px 3px grey;
+        }
+        .back{
+            background-image: url("../assests/192129.jpg");
+            background-size: 150px 150px;
+            opacity: 0.9;
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    translate3d()
+    scale3d();
+    skew3d();
+    translate3d()
+    -->
+    <div class="container">
+        <div class="back">
+            <img src="../assests/192129.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
