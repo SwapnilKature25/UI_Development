@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Bootstrap Modals</title>
+</head>
+<body class="container-fluid">
+    <h2>Bootstrap Modals</h2>
+    <!-- Usually modals will not display on the page 
+        to use it we have to use jquery 
+    -->
+    <!-- toggle indicates which component you want to on and off and in that component which specific component and we can refer it by using target  -->
+    <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+    <button class="btn btn-secondary">Login</button>
+    
+    <div class="modal fade modal-fullscreen" id="registerModal">
+        <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Register new User</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>User Name</dt>
+                        <dd><input type="text"></dd>
+                        <dt>Password</dt>
+                        <dd><input type="password" ></dd>
+                        <dt>Email</dt>
+                        <dd><input type="email" name="" id=""></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="bi btn-outline-primary">Register</button>
+                    <button class="btn-close" data-bs-dismiss="modal" ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Register new User</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"></div>
+                    <dl>
+                        <dt>User Name</dt>
+                        <dd><input type="text"></dd>
+                        <dt>Password</dt>
+                        <dd><input type="password" ></dd>
+                        <dt>Email</dt>
+                        <dd><input type="email" name="" id=""></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="bi btn-outline-primary">Register</button>
+                    <button class="btn-close" data-bs-dismiss="modal" ></button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="../../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../../node_modules/jquery/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
