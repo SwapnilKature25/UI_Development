@@ -5,18 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
-    <title>Alert component</title>
+    <title>Collapse Demo</title>
 </head>
-<body>
-    <div class="container-fluid">
-        <h2>Alerts</h2>
-        <div class="alert alert-danger alert-dismissible">
-            <button class="btn-close" data-bs-dismiss="alert"></button>
-            <h2 class="alert-title">Delete Record</h2>
-            <p class="alert-text">Selected Record will be deleted</p>
-            <a class="alert-link" href="#">Help?</a>
-            <button data-bs-dismiss="alert">OK</button>
-        </div>
+<body class="container-fluid">
+    <h2>Collapse Demo</h2>
+    <button data-bs-toggle="collapse" data-bs-target="#preview">Preview Show/Hide</button>
+    <div class="collapse show"  id="preview">
+        <img src="../assets/RR_Bugatti_Chiron_Super_Sport.webp" width="200" height="200">
     </div>
 
     <script src="../../../node_modules/jquery/dist/jquery.js"></script>

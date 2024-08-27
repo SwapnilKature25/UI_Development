@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Bootstrap Accordion</title>
+</head>
+<body class="container-fluid">
+    <h2>Accordion</h2> 
+    <div class="accordion" id="topics">
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#css">
+                    <h3>CSS Tutorial</h3>
+                </button>
+            </div>
+            <div id="css" data-bs-parent="#topics" class="accordion-body accordion-collapse collapse show">
+                <p>Something about css Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est minima, fugit rerum animi ullam sequi? Libero odit deserunt fugiat placeat.</p>
+                <p>Something about css Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est minima, fugit rerum animi ullam sequi? Libero odit deserunt fugiat placeat.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button bg-primary" data-bs-toggle="collapse" data-bs-target="#html">
+                    <h3>HTML Tutorial</h3>
+                </button>
+            </div>
+            <div class="accordion-body accordion-collapse collapse" id="html" data-bs-parent="#topics">
+                <p>Something about HTML... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus et quas eum dicta mollitia quisquam dolores veniam illo rerum facilis.</p>
+                <p>Something about HTML... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus et quas eum dicta mollitia quisquam dolores veniam illo rerum facilis.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#js">
+                    <h3>JS Tutorial</h3>
+                </button>
+            </div>
+            <div class="accordion-body accordion-collapse collapse" id="js" data-bs-parent="#topics">
+                <p>Something about js..... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime blanditiis quo possimus sint inventore tenetur asperiores culpa animi ipsam ex?</p>
+                <p>Something about js..... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime blanditiis quo possimus sint inventore tenetur asperiores culpa animi ipsam ex?</p>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="btn btn-danger w-100" data-bs-toggle="collapse" data-bs-target="#css2">
+                    <h3>CSS2 Tutorial</h3>
+                </button>
+            </div>
+            <div id="css2" data-bs-parent="#topics" class="accordion-body accordion-collapse collapse show">
+                <p>Something about css Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est minima, fugit rerum animi ullam sequi? Libero odit deserunt fugiat placeat.</p>
+                <p>Something about css Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est minima, fugit rerum animi ullam sequi? Libero odit deserunt fugiat placeat.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="btn btn-secondary w-100" data-bs-toggle="collapse" data-bs-target="#html5">
+                    <h3>HTML5 Tutorial</h3>
+                </button>
+            </div>
+            <div class="accordion-body accordion-collapse collapse" id="html5" data-bs-parent="#topics">
+                <p>Something about HTML... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus et quas eum dicta mollitia quisquam dolores veniam illo rerum facilis.</p>
+                <p>Something about HTML... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus et quas eum dicta mollitia quisquam dolores veniam illo rerum facilis.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="btn btn-success w-100" data-bs-toggle="collapse" data-bs-target="#btn">
+                    <h3>Btn Tutorial</h3>
+                </button>
+            </div>
+            <div class="accordion-body accordion-collapse collapse" id="btn" data-bs-parent="#topics">
+                <p>Something about js..... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime blanditiis quo possimus sint inventore tenetur asperiores culpa animi ipsam ex?</p>
+                <p>Something about js..... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime blanditiis quo possimus sint inventore tenetur asperiores culpa animi ipsam ex?</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="../../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
