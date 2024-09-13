@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <style>
+        .box{
+            width: 600px;
+            height: 500px;
+            background-color: grey;
+            display: flex;
+            /* for width(left-right) center 
+            start, end , space-between, space-around, space-evenly, 
+            */
+            justify-content: space-between ;
+            /* for top-bottom center */
+            align-items: center;
+        }
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+        }
+        #box2{
+            width: 100px;
+            height: 200px;
+            background-color: red;
+        }
+        #box3{
+            width: 100px;
+            height: 130px;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+</body>
+</html>
