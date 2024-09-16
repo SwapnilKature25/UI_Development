@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Bootstrap Navigation</title>
+</head>
+<body>
+    <h2>Product info</h2>
+    <div class="nav nav-tabs">
+        <a class="nav-item">Basic Details</a>
+        <a class="nav-item">Preview</a>
+        <a class="nav-item">Description</a>
+    </div>
+    
+    <h2>Product info</h2>
+    <!-- nav-tabs used for links
+    and  nav-pills used for buttons 
+    -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link">Basic Details</a></li>
+        <li class="nav-item active"><a class="nav-link">Preview</a></li>
+        <li class="nav-item"><a class="nav-link">Description</a></li>
+    </ul>
+
+    <ul class="nav nav-pills ">
+        <li class="nav-item"><button class="btn btn-primary m-2">Basic Details</button></li>
+        <li class="nav-item"><button class="btn btn-primary m-2">Preview</button></li>
+        <li class="nav-item"><button class="btn btn-primary m-2">Description</button></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane" id="basic">
+            <h2>Basic Details</h2>
+            <dl>
+                <dt>Name</dt>
+                <dd>Boat</dd>
+                <dt>Price</dt>
+                <dd>5600</dd>
+            </dl>
+        </div>
+        <div class="tab-pane" id="preview">
+            <h2>Preview</h2>
+            <img src="" alt="">
+        </div>
+        <div class="tab-pane" id="description">
+            <h2>Description</h2>
+            
+        </div>
+    </div>
+
+
+    <script src="../../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>

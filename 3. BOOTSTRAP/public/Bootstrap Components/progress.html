@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- we can't give message in html progress -->
+    <h3>Html Progress</h3>
+    <progress min="1" max="100" value="40"></progress> 40%
+
+    <!-- we can give message in Bootstrap progress -->
+    <h2>Bootstrap Progress</h2>
+    <!-- 
+        progress
+        progress-bar
+        progress-bar-striped   = slant light stripes it will show
+        progress-bar-animated
+    -->
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 40%;  background-color: rgb(223, 140, 7);" >
+            40% completed 
+        </div>
+
+        <div class="progress-bar progress-bar-striped  bg-warning" style="width: 60%;  background-color: rgb(223, 140, 7);" >
+        60% remaining 
+        </div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated w-25 bg-warning"></div>
+    </div>
+    <script src="../../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>
