@@ -14,7 +14,8 @@
     -->
     <!-- toggle indicates which component you want to on and off and in that component which specific component and we can refer it by using target  -->
     <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
-    <button class="btn btn-secondary">Login</button>
+    <!-- <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button> -->
+   <a href="#loginModal" data-bs-toggle="modal">Login</a> 
     
     <div class="modal fade modal-fullscreen" id="registerModal">
         <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollable">
@@ -42,11 +43,11 @@
     </div>
 
 
-    <div class="modal fade" id="loginModal">
-        <div class="modal-dialog">
+    <div class="modal fade modal-fullscreen" id="loginModal">
+        <div class="modal-dialog   modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title">Register new User</h2>
+                    <h2 class="modal-title">User Login</h2>
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body"></div>
@@ -55,12 +56,10 @@
                         <dd><input type="text"></dd>
                         <dt>Password</dt>
                         <dd><input type="password" ></dd>
-                        <dt>Email</dt>
-                        <dd><input type="email" name="" id=""></dd>
                     </dl>
                 </div>
                 <div class="modal-footer">
-                    <button class="bi btn-outline-primary">Register</button>
+                    <button class="bi btn-outline-primary">Login</button>
                     <button class="btn-close" data-bs-dismiss="modal" ></button>
                 </div>
 

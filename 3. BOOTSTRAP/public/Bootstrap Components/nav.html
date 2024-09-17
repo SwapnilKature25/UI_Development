@@ -19,20 +19,26 @@
     <!-- nav-tabs used for links
     and  nav-pills used for buttons 
     -->
-    <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link">Basic Details</a></li>
-        <li class="nav-item active"><a class="nav-link">Preview</a></li>
-        <li class="nav-item"><a class="nav-link">Description</a></li>
+    <ul class="nav nav-pills">
+        <!-- anchor is a old technique  -->
+        <!-- <li class="nav-item"><a class="nav-link">Basic Details</a></li> -->
+        <li class="nav-item"><button data-bs-toggle="pills"  class="nav-link">Basic Details</button></li>
+        <li class="nav-item active"><button class="nav-link">Preview</button></li>
+        <li class="nav-item"><button class="nav-link">Description</button></li>
     </ul>
 
-    <ul class="nav nav-pills ">
-        <li class="nav-item"><button class="btn btn-primary m-2">Basic Details</button></li>
-        <li class="nav-item"><button class="btn btn-primary m-2">Preview</button></li>
-        <li class="nav-item"><button class="btn btn-primary m-2">Description</button></li>
+
+    
+
+    <ul class="nav nav-tabs ">
+        <li class="nav-item"><button data-bs-toggle="tab" data-bs-target="#basic" class="btn btn-primary m-2">Basic Details</button></li>
+        <!-- we don't use anchor elements anymore from version 5 we use buttons instead of anchor -->
+        <li class="nav-item"><a href="#preview" data-bs-toggle="tab" class="btn btn-primary m-2">Preview</a></li>
+        <li class="nav-item"><button data-bs-toggle="tab" data-bs-target="#description" class="btn btn-primary m-2">Description</button></li>
     </ul>
 
     <div class="tab-content">
-        <div class="tab-pane" id="basic">
+        <div class="tab-pane fade show " id="basic">
             <h2>Basic Details</h2>
             <dl>
                 <dt>Name</dt>
@@ -41,16 +47,20 @@
                 <dd>5600</dd>
             </dl>
         </div>
-        <div class="tab-pane" id="preview">
+        <div class="tab-pane fade" id="preview">
             <h2>Preview</h2>
-            <img src="" alt="">
+            <img src="../assets/MC20BluInfinito.jpg" width="200" height="200" >
         </div>
-        <div class="tab-pane" id="description">
+        <div class="tab-pane fade" id="description">
             <h2>Description</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem repellat placeat quae laudantium rem nemo provident quos ad iure modi.</p>
             
         </div>
     </div>
 
+
+    <button onclick="alert('Inserted')">Insert</button>
+    <a href="javascript:alert('Deleted')">Delete</a>
 
     <script src="../../../node_modules/jquery/dist/jquery.js"></script>
     <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
