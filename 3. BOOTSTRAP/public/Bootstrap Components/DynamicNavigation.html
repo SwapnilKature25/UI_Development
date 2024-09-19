@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Dynamic Navigation bar</title>
+    <style>
+        iframe{
+            border: none;
+            height: 700px;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    <!-- navbar-dark requires combination of bg-dark  -->
+    <nav class="navbar navbar-expand-lg  navbar-dark  bg-dark mt-3">
+        <!-- container-fluid => keeping everything adjustable to device -->
+        <div class="container-fluid">
+             <!-- to display toggler in left side  -->
+            <a class="navbar-brand" href="#">
+                <span class="bi bi-cart4"></span> Amazon
+            </a>
+            <!-- to display toggler in right side  -->
+            <button class="navbar-toggler" data-bs-target="#menulist" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="menulist">
+                <div class="d-flex justify-content-between">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" target="framebody" href="forms.html"> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="framebody" href="card.html"> About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="framebody" href="./accordion.html"> Contact</a>
+                        </li>    
+                    </ul>
+                    <form class="input-group w-75">
+                            <input type="text" class="form-control">
+                            <button class="btn btn-warning">Search</button>
+                    </form>
+                  
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="mt-2">
+        <iframe name="framebody" src="./bootstrapImages.html" width="100%"></iframe>
+    </section>
+
+    <script src="../../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
