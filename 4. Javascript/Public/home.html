@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // <!--  js refer elements by using DOM Heirarchy  -->
+        // function bodyload(){
+        //     window.document.images[0].src="./assets/leftBanner.png";
+        //     window.document.forms[0].elements[0].value="Register";
+        //     window.document.forms[1].elements[1].value="Login";
+        // }
+
+
+        // js refer elements by using name 
+        // function bodyload(){
+        //     pic.src="./assets/leftBanner.png";
+        //     frmRegister.btnRegister.value="RegisterByName";
+        //     frmLogin.btnLogin.value="LoginByName";
+        // }
+
+        // js refer elements by using id 
+        function bodyload(){
+            document.getElementById("pic").src="./assets/leftBanner.png";
+            document.getElementById('btnRegister').value="RegisterById";
+            document.getElementById('btnLogin').value='LoginById';
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <!-- <img height="100" width="100" border="1"> -->
+    <!--  js refer elements by using DOM Heirarchy  -->
+    <!-- <div>
+        <form>
+            <h2>Register</h2>
+            User name : <input type="text"> <input type="button">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h2>Login</h2>
+            Email : <input type="email"> <input type="button">
+        </form>
+    </div> -->
+
+
+    <!-- js refer elements by using name and id 
+        we don't need to give id to parent as we are not refering to it.  
+    -->
+    <img height="100" width="100" border="1" name="pic" id="pic">
+    <div>
+        <form name="frmRegister">
+            <h2>Register</h2>
+            User name : <input type="text" name="txtName" > <input type="button" name="btnRegister" id="btnRegister">
+        </form>
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h2>Login</h2>
+            Email : <input type="email" name="txtEmail"> <input type="button" name="btnLogin" id="btnLogin">
+        </form>
+    </div>
+    
+</body>
+</html>
