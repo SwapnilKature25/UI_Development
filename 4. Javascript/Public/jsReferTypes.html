@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // <!-- 1. js refer elements by using DOM Heirarchy  -->
+        // function bodyload(){
+        //     window.document.images[0].src="./assets/leftBanner.png";
+        //     window.document.forms[0].elements[0].value="Register";
+        //     window.document.forms[1].elements[1].value="Login";
+        // }
+
+
+        // 2. js refer elements by using name 
+        // function bodyload(){
+        //     pic.src="./assets/leftBanner.png";
+        //     frmRegister.btnRegister.value="RegisterByName";
+        //     frmLogin.btnLogin.value="LoginByName";
+        // }
+
+        // 3.  js refer elements by using id 
+        // function bodyload(){
+        //     document.getElementById("pic").src="./assets/leftBanner.png";
+        //     document.getElementById('btnRegister').value="RegisterById";
+        //     document.getElementById('btnLogin').value='LoginById';
+        // }
+
+
+
+        // 4.  js refer elements by using CSS Selectors
+        // function bodyload(){
+        //     document.querySelector("#pic").src="./assets/leftBanner.png";
+        //     doucment.querySelector(".btn-register").value="Register";
+        //     doucment.querySelector(".btn-login").value="Login";         
+        // }
+
+
+
+        // 5. Js can refer all elements having common name
+        // function bodyload(){
+        //     result = document.getElementsByName("pay");
+        //     alert("Total number of Payment Methods : "+result.length)
+        // }
+
+
+
+        // 6.  Js can refer all elements having common class name
+        function bodyload(){
+            result= document.getElementsByClassName("form-input");
+            alert("Radios with Input Class : "+result.length);
+        }
+
+
+
+        //  7.  js can refer all elements by using Tag Name 
+        function bodyload(){
+            result= document.getElementsByTagName("h2");
+            alert("Total no. of Headings : "+result.length);
+        }
+
+
+    </script>
+</head>
+<body onload="bodyload()">
+
+    <!-- <img height="100" width="100" border="1"> -->
+    <!--  js refer elements by using DOM Heirarchy  -->
+    <!-- <div>
+        <form>
+            <h2>Register</h2>
+            User name : <input type="text"> <input type="button">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h2>Login</h2>
+            Email : <input type="email"> <input type="button">
+        </form>
+    </div> -->
+
+
+
+
+
+    <!-- js refer elements by using name and id 
+        we don't need to give id to parent as we are not refering to it.  
+    -->
+    <!-- <img height="100" width="100" border="1" name="pic" id="pic">
+    <div>
+        <form name="frmRegister">
+            <h2>Register</h2>
+            User name : <input type="text" name="txtName" > <input type="button" name="btnRegister" id="btnRegister">
+        </form>
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h2>Login</h2>
+            Email : <input type="email" name="txtEmail"> <input type="button" name="btnLogin" id="btnLogin">
+        </form>
+    </div> -->
+
+
+
+
+    <!-- js refer elements by using CSS Selectors -->
+    <img height="100" width="100" border="1" name="pic" id="pic">
+    <div>
+        <form name="frmRegister"> 
+            <h2>Register</h2>
+            User name : <input type="text" placeholder="RegisterBySelector" name="txtName" > 
+            <input type="button" name="btnRegister" class="btn-register" id="btnRegister">
+        </form>
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h2>Login</h2>
+            Email : <input type="email" name="txtEmail"> 
+            <input type="button" name="btnLogin" class="btn-login" id="btnLogin">
+        </form>
+    </div>
+    
+
+
+
+    <br><br><br>
+
+    <!-- 6.  Js can refer all elements having common name and class name -->
+    <fieldset>
+        <legend>Payment Method</legend>
+        <input type="radio" name="pay" class="form-input"> Cash
+        <input type="radio" name="pay" class="form-input"> UPI
+        <input type="radio" name="pay" class="form-input"> Credit Card
+    </fieldset>
+</body>
+</html>
