@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Input Techniques</title>
+    <script>
+        function CreateClick(){
+            foldername= prompt("Enter Folder Name ","New Folder");
+            if(foldername == null){
+                document.write("You Cancelled...");
+            } else if(foldername == ""){
+                document.write("Please provide folder name..");
+            }else {
+                document.querySelector("p").innerHTML="Folder Created : "+foldername;
+            }
+        }
+    </script>
+</head>
+<body  class="container-fluid">
+    <!-- 
+        prompt   => it is like alert with input
+        form input elements   => 
+         
+    -->
+    <!-- Folder Name : 
+    <input type="text"> -->
+    <!-- <button onclick="CreateClick()">Create Folder</button>
+    <p></p> -->
+
+
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> -->
+</body>
+</html>
