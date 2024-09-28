@@ -42,7 +42,7 @@
         document.write(`x is ${typeof x} = ${x} <br>`);
 
         // isNaN(value) used to verify number type
-        var Age= prompt("Enter age ");
+        // var Age= prompt("Enter age ");
         if(isNaN(Age)){
             document.write("Please enter a numeric value ");
         } else {
@@ -51,14 +51,21 @@
         
 
 
+        // parseInt() and parseFloat()
         function SubmitClick(){
+            // whatever value you take from html element it will be String.
             var age= document.getElementById("lstAge").value;
-            document.write("Your age will be "+ (age + 1) +" next year");
+            document.write("Your age will be "+ (parseInt(age) + 1) +" next year");     // here parseInt() is used to convert default string value to int.
         }
-
         SubmitClick();
 
-</script>
+        var a="10AB";   // valid    => it takes only 10
+        var a="AB10";   // invalid
+        var a="20AB10";   // valid  => it takes only 20 from the String
+        var b=20;
+        // var c=parseInt(a) + b;
+        document.write(parseInt(a) + b);
+    </script>
 </head>
 <body>
     <dl>

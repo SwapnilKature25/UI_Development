@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Tpe - String type</title>
+     <script>
+            function SubmitClick(){
+                var username= prompt("Enter your name");
+                var age=document.getElementById("lstAge").value;
+                // leading spaces means before and after words spaces.
+                // " Hello ! "  => the spaces after ! is called leading spaces and this leading spaces will be trimmed by js in future 
+                var msg1="Hello !! " + username + " you will be "+ (parseInt(age)+1) + " next year  <br>";
+                // ` ` =>  back tick allowed embedded expression 
+                // expression will not work in '' or " "
+                //  ${}  => Data Binding Expression
+                var msg2 = `Hello ! ${username} you will be ${parseInt(age)+1} next year. `;
+ 
+                document.write(msg1);
+                document.write(msg2);
+            }
+
+            // to print the escape sequence chars use \  
+            var imgPath = "\".\\assets\\leftBanner.png\+\"";
+            document.write(imgPath);
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Select Age</dt>
+        <dd>
+            <select id="lstAge">
+                <option value="15">15</option>
+                <option value="25">25</option>
+                <option value="21">21</option>
+                <option value="13">13</option>
+            </select>
+        </dd>
+        <button onclick="SubmitClick()">Submit</button>
+    </dl>
+</body>
+</html>
