@@ -5,12 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variables</title>
     <script>
+
+        "use strict"
+
+        var b=111;  //module scope variable / global variable
+        export var d=121;       // to access outside of the module
+        /*
         username = prompt("Enter Name ");
         document.write('Hello '+username);
         document.write('r u '+username);
+
+
+        var x;  //Declaration
+        x=10;  // Assignment
+        var y = 20;     // Initialization  = Declaration + Assignment 
+
+        */
+
+         function f1(){
+            var x;
+            x=10;
+            if(x==10)
+             {
+                // variable shadowing
+                var y=20; 
+                var y=40;  
+
+                a=200;
+                document.write("a : "+a);
+                var a;  //hoisting
+             }
+             document.write("<br> x : "+x+ "</br>"+"y : "+y); 
+            }
+            
+            
+            //  let variable
+            function f2(){
+                var x;
+                let p;
+                // const x;   // invaid
+                const m=10;
+                const user=prompt("ENTER UR NAME ");
+                document.write("Hello "+user);
+                m=20;
+                p=100;
+                if(p==100){
+                    let x=200;                    
+                    document.write("<br> p : "+p+ "</br>"+"x : "+x); 
+                }
+         }
+
+        //  f1();
+        //  f2();
+
+
+        //  to access function outside of the module
+         export function fun1(){
+            // window makes it global variable
+                window.c=20;
+                document.write("X in function-1 : "+c);
+         }
+         function fun2(){
+                document.write("X in function-2 : "+c);
+         }
+
+         fun1();
+         fun2();
     </script>
 </head>
 <body>
-    
+    <script src="../../Script/importDemo.js">
+
+    </script>
 </body>
-</html>
+</html

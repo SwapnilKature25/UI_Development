@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <script>
+
+        // Number
+        // String
+        // Boolean
+        // null
+        // undefined
+
+        // var x =10;
+        document.write(`Min=${Number.MIN_SAFE_INTEGER}`+"<br>"+`Max=${Number.MAX_SAFE_INTEGER} <br>`);
+        // Min=-9007199254740991
+        // Max=9007199254740991
+
+        var y="Welcome";    // temporary memory - cache memory means RAM - 16 GB, 8 GB
+        // String range is 2GB  , from ES7 onwards they increased size earlier it was 1.4 GB only. 
+
+
+        // stack follows LIFO mechanism
+        // js is not strongly typed language.
+        var x=10;   //x is number
+        x="sstring";    // x is string
+        x=true;     //x is boolean
+        document.write(`x is ${typeof x} <br>`);
+
+
+
+
+        // Number types 
+
+        var x=23.34;
+        x=234.33987879879879879874;
+        x=2e3 ;     //2000
+        x=0b1010;   //10
+        x=0xffff;     //65535
+        x=0o777;    //511
+        document.write(`x is ${typeof x} = ${x} <br>`);
+
+        // isNaN(value) used to verify number type
+        var Age= prompt("Enter age ");
+        if(isNaN(Age)){
+            document.write("Please enter a numeric value ");
+        } else {
+            document.write("Age : "+Age);
+        }
+        
+
+
+        function SubmitClick(){
+            var age= document.getElementById("lstAge").value;
+            document.write("Your age will be "+ (age + 1) +" next year");
+        }
+
+        SubmitClick();
+
+</script>
+</head>
+<body>
+    <dl>
+        <dt>Select Age</dt>
+        <dd>
+            <select id="lstAge">
+                <option value="15">15</option>
+                <option value="25">25</option>
+                <option value="21">21</option>
+            </select>
+        </dd>
+        <button onclick="SubmitClick()">Submit</button>
+    </dl>
+</body>
+</html>
