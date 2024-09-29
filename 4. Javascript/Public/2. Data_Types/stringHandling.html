@@ -14,6 +14,11 @@
                     msg.innerHTML = "Invalid - User Name 4 to 10 chars Only".italics().fontcolor('red');
                 }
 
+            } 
+
+            function ChangeCase(){
+                var username= document.getElementById("txtName").value;
+                document.getElementById("txtName").value = username.toUpperCase();
             }
     </script>
 </head>
@@ -22,7 +27,7 @@
     <dl>
         <dt>User Name </dt>
         <dd>
-            <input type="text" id="txtName" onkeyup="VerifyUser()">
+            <input type="text"Block Letters" id="txtName" onkeyup="VerifyUser()" onblur="ChangeCase()">
         </dd>
         <dd id="msg"> </dd>
     </dl>

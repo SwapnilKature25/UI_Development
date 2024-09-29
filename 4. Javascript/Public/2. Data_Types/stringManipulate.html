@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulations</title>
+    <script>
+        function ChangeCase(){
+            var username = document.getElementById("txtName").value;
+            var firstChar = username.charAt(0);
+            var restChars = username.substring(1);
+            var sentence = firstChar.toUpperCase() + restChars.toLowerCase();
+            document.getElementById("txtName").value = sentence ;                      
+
+        }
+
+
+        // configure to input first letter as Uppercase 
+        function VerifyName(){
+            var userName = document.getElementById("txtName2").value;
+            if(userName.charCodeAt(0)>= 65 && userName.charCodeAt(0) <= 90){
+                document.querySelector("p").innerHTML = "Verifying".fontcolor("green");
+            }
+            else {
+                document.querySelector("p").innerHTML = "Name must Start with Uppercase Letter".fontcolor("red");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Test</legend>
+        <div>
+            <input type="text" id="txtName" onblur="ChangeCase()">
+        </div>
+        <br><br>
+        <div>
+            <input type="text" id="txtName2" placeholder="Name must start with Uppercase" size="40" onblur="ChangeCase2()" onkeyup="VerifyName()">
+            <p></p>
+        </div>
+    </fieldset>
+</body>
+</html>

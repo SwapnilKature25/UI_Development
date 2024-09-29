@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <script>
+        function ChangeColor(){
+            // alert(document.querySelector("select").value);
+            // var val=document.querySelector("select").value;
+            // document.querySelector("p").innerHTML = "Welcome to JavaScript".fontcolor(val);
+           
+            // applying to string   ---> old technique
+            document.querySelector("p").innerHTML = "Welcome to JavaScript".fontcolor(document.querySelector("select").value);
+           
+            // applying to element  ---> new technique
+            document.querySelector("h1").style.color = document.querySelector("select").value;
+
+            
+        }
+    </script>
+
+</head>
+<body class="container-fluid">
+    <fieldset>
+        <legend>Choose Effects</legend>
+        <dl>
+            <dt>FOnt Color</dt>
+            <dd>
+                <select onchange="ChangeColor()">
+                    <option value="Red">Red</option>
+                    <option value="Green">Green</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="White">White</option>
+                    <option value="Blue">Blue</option>
+                </select>
+            </dd>
+        </dl>
+    </fieldset>
+
+    <p></p>
+    <h1>Welcome to JavaScript </h1>
+
+</body>
+</html>
