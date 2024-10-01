@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>match fun Demo</title>
+    <style>
+        meter {
+            height: 30px;
+        }
+    </style>
+    <script>
+        // match()
+        
+        function VerifyPassword(){
+            var password = document.getElementById("txtPwd").value;
+            var regExp = /(?=.*[A-Z]\w{4,15})/;
+            var msg = document.getElementById("msg");
+            var grade = document.getElementById("grade");
+
+            function ShowGrade(min,max, value,low, high){
+                grade.min = min;
+                grade.max = max;
+                grade.value = value;
+                grade.low = low;
+                grade.high = high;
+            }
+
+            if(password == ""){
+                msg.innerHTML = "Password Required";
+                msg.className = "text-danger";
+                
+            } else {
+                if(password.match(regExp)){
+                msg.innerHTML = "Strong Password";
+                msg.className = "text-success";
+                ShowGrade(1,100,100,0,0);
+                }
+                else {
+                if(password.length < 4){
+                    msg.innerHTML = "Poor Password";
+                    msg.className = "text-danger";
+                    ShowGrade(1,100,100,60,80);
+                }
+                else {
+                    msg.innerHTML = "Weak Password";
+                    msg.className = "text-warning";
+                    ShowGrade(1,100,100,40,80);
+                }
+               }
+            }
+        }
+
+
+        function VerifyMobile(){
+            var mobile = document.getElementById("txtMobile").value;
+            var mobileExpression = /\+91\d{10}/;
+            if(mobile.match(mobileExpression)){
+                mobileError.innerHTML = "Verified.....";
+                mobileError.className = "text-success";
+            } else {
+                mobileError.innerHTML = "Invalid Mobile";
+                mobileError.className = "text-danger";
+            }
+        }
+    </script>
 </head>
-<body>
-    
+<body class="container-fluid">
+    <h2>Verify Password</h2>
+    <input type="password" onkeyup="VerifyPassword()" id="txtPwd" class="form-control">
+    <div id="msg">    </div>
+    <div>
+        <meter id="grade" min="1" max="100" class="w-100"></meter>
+    </div>
+
+    <h2>Verify Mobile</h2>
+    <input type="text" onkeyup="VerifyMobile()" id="txtMobile" class="form-control">
+    <div id="mobileError"> </div>
 </body>
 </html>

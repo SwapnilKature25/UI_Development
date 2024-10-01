@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Trim() and Spilt()</title>
+    <script>
+        function VerifyPassword(){
+            var pwd = document.getElementById("txtPwd").value;
+            if(pwd.trim() == "admin"){
+                document.querySelector("h2").innerHTML = "Verified";
+            } else {
+                document.getElementById("h2").innerHTML = "Invalid Password";
+            }
+        }
+    </script>
+</head>
+<body>
+    Your Password :
+    <input type="text" id="txtPwd" class="form-control"> <button onclick="VerifyPassword()" class= "btn btn-secondary btn-lg mt-3 ">Submit</button>
+    <h2></h2>
+</body>
+</html>
