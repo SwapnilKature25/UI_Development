@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>String Manipulation Functions</title>
+    <script>
+        // slice(start_index,endIndex)
+        // substr(start_index, countOfChars)
+        // substring(start_index, endIndex)
+        // indexOf()   => returns first occurance
+        // lastIndexOf()   => return last occurance
+
+
+        var msg = "Welcome to JavaScript";
+        // document.write(msg.slice(0,7));     //slice(start_index,end)
+        document.write(msg.slice( 7)+'<br>');     //slice(start_index,end)
+        document.write(msg.slice(-6,-1)+'<br>');     //slice(start_index,end)
+
+
+        document.write(msg.substr(11,3)+'<br>');    // Jav
+        document.write(msg.substr(0,3));    // Wel
+        document.write(msg.substr(7,0)+'<br>');    // 
+        
+        var m="Welcome to Bootstrap";
+        document.write(m.substring(7,0)+'<br>');    // Welcome
+        document.write(m.substring(0,7)+'<br>');    // Welcome
+        document.write(m.substring(12,6)+'<br>');    //   e to B
+
+
+
+        function VerifyEmail(){
+            var email = document.getElementById("txtEmail").value;
+            var msg = document.querySelector("h2");
+            var atPosition = email.indexOf("@");
+            if(atPosition < 2){
+                msg.innerHTML = "Invalid email";
+            } else {
+                msg.innerHTML = "Verified email";
+            }
+        }
+
+
+        var index="Welcome to Javascript";
+        document.write(index.indexOf("a")+'<br>'); // 12
+        document.write(index.lastIndexOf("a")); // 14
+
+
+
+        function VerifyCard(){
+            var cardNumber= document.getElementById("txtCard").value;
+            var cardImg = document.getElementById("cardImg");
+            if(cardNumber.startsWith("4444")){
+                cardImg.src="../../assets/mastercard.png"
+            }
+            else if(cardNumber.startsWith("5555")){
+                cardImg.src="../../assets/visa.png"
+            }
+            else {
+                cardImg.src="";
+                cardImg.alt = "N/A";
+            }
+        }
+
+
+        function VerifyEmail(){
+            var email=document.getElementById("txtEmail").value;
+            var suffix = email.endsWith("@gmail.com");
+            if(email == suffix ){
+                document.getElementById("msg").innerHTML = "Email Verified";   
+            }
+            else {
+                document.getElementById("msg").innerHTML = "Invalid Email";   
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <fieldset>
+        <legend>Your Email</legend>
+        <input type="text" id="txtEmail" ><button onclick="VerifyEmail()">Submit</button>
+    </fieldset>
+    <h2></h2>
+
+
+    <br><br><br>
+    <fieldset>
+        <legend>Verify Details</legend>
+        <div>
+            <h3>Card Number</h3>
+            <div class="input-group">
+                <input type="text" id="txtCard" onkeyup="VerifyCard()" class="form-control">
+                <img  class="input-group-text" class="img-fluid" id="cardImg" width="100" height="50">
+            </div>
+            <h3>Your Gmail</h3>
+            <div class="input-group">
+                <input type="text" id="txtEmail" onkeyup="VerifyEmail()" class="form-control">
+                <div id="msg">
+
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+</body>
+</html>
